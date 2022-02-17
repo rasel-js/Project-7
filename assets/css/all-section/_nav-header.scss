@@ -1,0 +1,120 @@
+/** Nav Header start **/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1440px;
+    background: hsla(257, 100%, 99%, 0.9);
+    backdrop-filter: blur(15px);
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px $px;
+    box-shadow: 0 10px 30px -5px hsla(0, 0%, 0%, 0.03);
+    z-index: 100;
+    
+    .navbar-nav {
+        position: absolute;
+        background: $white;
+        top: calc(100% + 40px);
+        left: 30px;
+        right: 30px;
+        text-align: center;
+        box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.25); 
+        padding: 30px;  
+        border-radius: 8px;
+        opacity: 0;
+        pointer-events: none;
+        
+        &.active {
+            animation: menuPopup .60s ease forwards;
+            pointer-events: all;
+            
+        }
+
+        .nav-item {
+            &:not(:last-child) {
+                a {
+                    border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
+                }
+            }
+            a {
+                padding: 9px;
+                font-size: $fs-5;
+                font-weight: $fw-6;
+                color: $oxford-blue;
+                transition: $default-transition;
+                &:hover {
+                    color: $red-orang;
+                }
+            }
+        }
+    }
+
+}
+
+
+@keyframes menuPopup {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+.navbar .btn {
+    @include btn;
+    display: none;
+}
+
+.nav-toggle-btn {
+    background: $red-orang;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-toggle-btn {
+
+    span {
+        background: $white;
+        width: 30px;
+        height: 2px;
+        transition: $default-transition;
+    }
+    &.active {
+         
+        .one {
+            transform: rotate(45deg) translate(3px, 3px);
+        }
+        .two {
+            display: none;
+        }
+        .three {
+            transform: rotate(-45deg) translate(2px, -2px);
+        }
+    }
+}
+
+
+
+
+
+/** Nav Header end **/

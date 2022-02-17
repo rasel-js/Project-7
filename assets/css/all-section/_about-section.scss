@@ -1,0 +1,95 @@
+/* About section start */
+.about-section {
+
+    padding: $py $px;
+    background: $cultured;
+    overflow: hidden;
+
+    .about-left {
+        
+        img {
+            position: absolute;
+        }
+        .img-box {
+            position: relative;
+        }
+    }
+
+    .about-bg, .about-img {
+        width: auto;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .about-left {
+
+        .about-img {
+            position: relative;
+            z-index: 2;
+        }
+
+        .icon-1 {
+            top: 130px;
+            right: 0;
+            z-index: 5;
+        }
+        
+        .icon-2 {
+            z-index: 5;
+        }
+    }
+
+    .about-right {
+        padding-top: 50px;
+
+        .section-subtitle {
+            margin-bottom: 10px;
+            @include section-subtitle;
+        }
+        
+        .section-title {
+            margin-bottom: 30px;
+            @include section-title;
+        }
+
+        .section-text {
+            margin-bottom: 20px;
+        }
+    }
+
+    .about-ul {
+
+        margin-bottom: 40px;
+
+        li:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        ion-icon {
+            font-size: 30px;
+            color: $red-orang;
+        }
+
+        p {
+            color: $oxford-blue;
+            font-family: 'Roboto', sans-serif;
+            font-size: $fs-6;
+            font-weight: $fw-5;
+            line-height: 1.6;
+            text-align: left;
+        }
+    }
+
+
+    .btn {
+        @include btn;
+    }
+}
+
+/* About section end */

@@ -1,0 +1,151 @@
+/* Event section start */
+.event-section {
+    padding: $py $px;
+    
+    background: $cultured;
+    
+
+    .event-left {
+        position: relative;
+        max-width: max-content;
+        margin-bottom: 50px;
+
+        .event-banner {
+
+            .event-img {
+                width: auto;
+                max-width: 100%;
+                border-radius: 8px;
+            }
+            
+
+        }
+
+        button {
+
+        }
+        .play {
+            position: absolute;
+            bottom: 100px;
+            right: 0;
+            padding: 30px 40px;
+            background: $red-orang;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px hsla(15, 100%, 55%, 0.7);
+
+            .play-icon {
+                border-radius: 50%;
+                box-shadow: 0 0 0 15px transparent;
+
+            }
+
+            ion-icon {
+                display: block;
+                color: $white;
+                font-size: 70px;
+                margin: -8px;
+            }
+            
+            p {
+                font-size: $fs-4;
+                font-weight: $fw-7;
+                color: $white;
+            }
+                
+             
+        }
+    }
+
+    .section-subtitle {
+        margin-bottom: 15px;
+        @include section-subtitle;
+        
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+        color: $oxford-blue !important;
+        @include section-title;
+    }
+
+    .event-right {
+
+        .event-card-group {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            
+            .event-card {
+                background: $white;
+                border-radius: 8px;
+                padding: 30px 25px;
+                box-shadow: 0 10px 30px hsla(0, 0%, 0%, 0.1);
+                border-right: 5px solid transparent;
+                transition: $default-transition;
+                &:hover {
+                    border-color: $red-orang;
+                }
+                &:hover .event-name {
+                    color: $red-orang !important;
+                    
+                }
+
+                .content-left {
+                    width: 100%;
+                    text-align: center;
+                    padding-bottom: 15px;
+                    margin-bottom: 25px;
+                    box-shadow: 0 16px 0 -15px $light-gray;
+
+                    .day {
+                        font-size: $fs-3;
+                        font-weight: $fw-7;
+                        color: $blue-crayola
+                    }
+                    
+                    .month {
+                        font-size: $fs-6;
+                        font-weight: $fw-5;
+                        color: $blue-crayola;
+                    }
+                }
+
+                .content-right {
+
+                    .schedule {
+                        display: flex;
+                        justify-content: center;
+                        margin-bottom: 10px;
+
+                        p {
+                            font-family: 'Roboto', sans-serif;
+                            font-size: $fs-6;
+                            color: $sonic-silver;
+                        }
+
+                        .time {
+                            padding-right: 20px;
+                            margin-right: 20px;
+                            box-shadow: 4px 0 0 -3px $light-gray;
+                        }
+
+                        
+                    }
+
+                    .event-name {
+                        color: $oxford-blue;
+                        font-size: $fs-4;
+                        font-weight: $fw-7;
+                        line-height: 1.6;
+                        text-align: center;
+                        transition: $default-transition;
+                    }
+                }
+            }
+        }
+    }
+}
+/* Event section end */

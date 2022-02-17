@@ -1,0 +1,46 @@
+/* Contact section start */
+.contact-section {
+    position: relative;
+    max-width: 1440px;
+    margin: auto;
+
+    .contact-card {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $ultra-blue;
+        width: calc(90% - 15px);
+        padding: 30px 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        border-radius: 8px;
+        overflow: hidden;
+        
+
+        .contact-card-bg {
+            position: absolute;
+            width: auto;
+            max-width: 100%;
+            top: -2px;
+            left: -2px; 
+        }
+
+        h2 {
+            position: relative;
+            font-size: 30px;
+            color: $white;
+            font-weight: $fw-8;
+            text-align: center;
+        }
+
+        .btn-primary {
+            justify-self: center;
+        }
+        .btn {
+            @include btn;
+        }
+    }
+}
+/* Contact section end */

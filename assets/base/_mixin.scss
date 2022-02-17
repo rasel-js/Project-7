@@ -1,0 +1,67 @@
+/** Button style start **/
+@mixin btn {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: $fs-6;
+    font-weight: $fw-5;
+    border-radius: 8px;
+    color: $white;
+    padding: 20px 45px;
+    text-transform: uppercase;
+    overflow: hidden;
+    &:hover .square {
+        right: -2px;
+        width: 102%;
+        height: 102%;
+    }
+    .btn-text {
+        position: relative;
+        z-index: 5;
+    }
+
+    .square {
+        position: absolute;
+        top: 50%;
+        right: 20%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        transition: $default-transition;
+    }
+}
+
+.btn-primary {
+    background: $red-orang;
+    .square {
+        background: $oxford-blue;
+    }
+}
+
+.btn-secondary {
+    background: $oxford-blue;
+    .square {
+        background: $red-orang;
+    }
+}
+/** Button style end **/
+
+@mixin section-subtitle {
+    color: $ultra-blue;
+    font-weight: $fw-7;
+    text-transform: uppercase;
+}
+
+@mixin section-text {
+    color: $sonic-silver;
+    font-family: 'Roboto', sans-serif;
+    font-size: $fs-6;
+    line-height: 1.6;
+}
+
+@mixin  section-title {
+    font-size: $fs-2;
+    font-weight: $fw-8;
+    color: $oxford-blue;
+    line-height: 1.3;
+}

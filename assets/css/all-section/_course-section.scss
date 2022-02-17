@@ -1,0 +1,171 @@
+/** Course section start **/
+.course-section {
+    padding: $py $px;
+
+    .section-subtitle {
+        margin-bottom: 15px;
+        @include section-subtitle;
+    }
+
+    .section-title {
+        margin-bottom: 60px;
+        @include section-title;
+    }
+
+    .course-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .course-card {
+        background: $white;
+        border-radius: 8px;
+        box-shadow: 0 10px 50px hsla(0, 0%, 0%, 0.1);
+        overflow: hidden;
+        &:hover .course-banner img {
+            transform: scale(1.05);
+
+        }
+        &:hover .card-title a {
+            color: $red-orang;
+        }
+
+        .course-banner {
+            position: relative;
+            overflow: hidden;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: $default-transition;
+            }
+
+            .course-tag-box {
+                position: absolute;
+                bottom: 20px;
+                left: 30px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+    
+            .badge-tag {
+                font-family: 'Roboto', sans-serif;;
+                font-size: $fs-6;
+                color: $white;
+                padding: 8px 20px;
+                border-radius: 5px;
+            }
+    
+            .orange {
+                background: $red-orang;
+            }
+    
+            .blue {
+                background: $ultra-blue;
+            }
+        }
+
+        .course-content {
+            padding: 30px;
+            padding-bottom: 20px;
+
+            .card-title {
+                margin-bottom: 20px;
+    
+                a {
+                    color: $oxford-blue;
+                    font-size: $fs-4;
+                    font-weight: $fw-7;
+                    line-height: 1.3;
+                    transition: $default-transition;
+                }
+            }
+
+            .wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .border-bottom {
+                margin-bottom: 15px;
+                padding-bottom: 30px;
+                border-bottom: 1px solid $light-gray;
+            }
+
+            .author {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .author-img {
+                border-radius: 50%;
+                border: 3px solid $white;
+                box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
+            }
+
+            .author-name {
+                font-family: 'Roboto', sans-serif;
+                font-size: $fs-6;
+                color: $sonic-silver;
+                transition: $default-transition;
+                &:hover {
+                    color: $oxford-blue;
+                }
+            }
+
+            .rating {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                ion-icon {
+                    font-size: 20px;
+                    color: hsl(45, 100%, 51%);
+                }
+            }
+        }
+
+        .enrolled {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .icon-user {
+                background: hsl(138, 59%, 91%);
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+            }
+        }
+        
+        .enrolled  p, .rating p {
+            font-family: 'Roboto', sans-serif;
+            font-size: $fs-6;
+            color: $sonic-silver;
+        }
+
+        .course-price {
+            color: $red-orang;
+            font-size: 20px;
+            font-weight: $fw-7;
+        }
+
+    }
+
+    
+    .btn {
+        @include btn;
+        display: block;
+        margin: auto;
+    }
+}
+/** Course section end **/
